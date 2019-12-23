@@ -23,9 +23,8 @@ public class SongBookCreatorApplication implements CommandLineRunner {
 	    public void run(String... args) {
 	       List<SongDTO> rawSongs = songDao.getSongs();
 	       List<Song> songs = SongMapper.parseList(rawSongs);
-//	       Song s = SongMapper.parseSong(rawSongs.get(0));
-	       songs.forEach(s -> { System.out.println("-----------------------------\n" + (i++) + ". " + s.title);System.out.println(s.lyrics);});
-	       
+	       OdtCreator.makeBook(songs);
+	       System.out.println("-----------Done-------------");
 	    }
 
 		

@@ -27,7 +27,7 @@ public class SongMapper {
 			StringBuilder lyricsBuilder = new StringBuilder();
 			lyricsBuilder.append("Ordine ").append(dto.order);
 			verses.forEach( v ->{
-				lyricsBuilder.append("\n\n[")
+				lyricsBuilder.append("\n\r\n\r[")
 				.append(v.getAttributeValue("type"))
 				.append(v.getAttributeValue("label"))
 				.append(":]")
